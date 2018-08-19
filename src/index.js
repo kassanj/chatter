@@ -5,8 +5,10 @@ import App from './components/App'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import reducer from './reducers'
+import middleware from './middleware'
 
-const store = createStore(reducer)
+
+const store = createStore(reducer, middleware)
 
 // Redux applications have a single store.
 // We have to pass the Root Reducer to our
