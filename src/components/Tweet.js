@@ -24,6 +24,7 @@ class Tweet extends Component {
 
   toParent = (e, id) => {
     e.preventDefault()
+
     this.props.history.push(`/tweet/${id}`)
   }
 
@@ -33,9 +34,11 @@ class Tweet extends Component {
     if (tweet === null) {
       return <p>This Tweet does not exist</p>
     }
+    
     const {
       name, avatar, timestamp, text, hasLiked, likes, replies, id, parent
     } = tweet
+
     return (
       <Link to={`/tweet/${id}`} className='tweet'>
         <img
